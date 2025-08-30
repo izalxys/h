@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Payment Izalmodz - Modern Interactive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </style>
+
+<p align="center">
+  <img src="https://files.catbox.moe/ta9ds2.gif" alt="Animasi Banner" width="400"/>
+</p>
+
+     <!-- Teks sambutan -->
+  <h1 id="typing"></h1>
+  
+  
+  <script>
+    const text = "WELCOME TO WEBSITE IZALMODZ";
+    const typingElement = document.getElementById("typing");
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>
+    
+    <!-- Open Graph Meta Tags for WhatsApp and Social Media -->
+    <meta property="og:title" content="Payment Izalmodz - Modern Interactive">
+    <meta property="og:description" content="Website pembayaran modern dan interaktif dari Izalmodz dengan fitur lengkap dan tampilan yang menarik.">
+    <meta property="og:image" content="2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="https://izalxys.github.io/Izalmodz/payment">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Izalmodz">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Payment Izalmodz - Modern Interactive">
+    <meta name="twitter:description" content="Website pembayaran modern dan interaktif dari Izalmodz dengan fitur lengkap dan tampilan yang menarik.">
+    <meta name="twitter:image" content="2.jpg">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="Website pembayaran modern dan interaktif dari Izalmodz dengan fitur lengkap dan tampilan yang menarik.">
+    <meta name="keywords" content="payment, izalmodz, modern, interactive, pembayaran">
+    <meta name="author" content="Izalmodz">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Zoom-friendly CSS */
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+        
+        /* Combined Clock and Prayer Times Widget */
+        .combined-widget {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(44, 16, 81, 0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 15px 20px;
+            color: white;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeInDown 1s ease;
+            min-width: 250px;
+        }
+        
+        .clock-section {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .clock-time {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .clock-date {
+            font-size: 0.9rem;
+            color: #d8bfd8;
+            text-align: center;
+        }
+        
+        .clock-location {
+            font-size: 0.8rem;
+            color: #e0b3ff;
+            text-align: center;
+            margin-top: 3px;
+        }
+        
+        .prayer-section {
+            margin-top: 15px;
+        }
+        
+        .prayer-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffcc70;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .prayer-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            padding: 3px 0;
+        }
+        
+        .prayer-item.current {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 5px;
+            color: #ffcc70;
+            font-weight: bold;
+        }
+        
+        .prayer-name {
+            color: #e0b3ff;
+        }
+        
+        .prayer-time {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* Admin Button */
+        .admin-button {
+            position: fixed;
+            top: 320px;
+            right: 90px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInDown 1s ease 0.3s both;
+        }
+
+        .admin-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Menu Dropdown Button */
+        .menu-dropdown-button {
+            position: fixed;
+            top: 320px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInDown 1s ease 0.4s both;
+        }
+
+        .menu-dropdown-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(138, 43, 226, 0.6);
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: fixed;
+            top: 380px;
+            right: 30px;
+            width: 200px;
+            background: rgba(44, 16, 81, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        .dropdown-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: #e0b3ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        .dropdown-item i {
+            margin-right: 12px;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dropdown-item:hover i {
+            background: linear-gradient(45deg, #fff, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Admin Panel Sidebar */
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 400px;
+            height: 100vh;
+            background: rgba(44, 16, 81, 0.95);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 10000;
+            transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow-y: auto;
+            box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .admin-panel.open {
+            left: 0;
+        }
+
+        .admin-panel-header {
+            padding: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .admin-panel-header h2 {
+            color: #ff7eee;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .admin-panel-header p {
+            color: #d8bfd8;
+            font-size: 1rem;
+        }
+
+        .close-admin-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: #ff7eee;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-admin-btn:hover {
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+        /* Login Form */
+        .admin-login {
+            padding: 30px;
+        }
+
+        .admin-login.hidden {
+            display: none;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #e0b3ff;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff7eee;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 126, 238, 0.3);
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .login-btn {
+            padding: 15px;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(45deg, #6a5acd, #8a2be2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        .login-error {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Admin Dashboard */
+        .admin-dashboard {
+            padding: 30px;
+            display: none;
+        }
+
+        .admin-dashboard.active {
+            display: block;
+        }
+
+        .admin-section {
+            margin-bottom: 40px;
+        }
+
+        .admin-section h3 {
+            color: #ffcc70;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-section h3 i {
+            font-size: 1.2rem;
+        }
+
+        .profile-upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .profile-upload-area:hover {
+            border-color: #ff7eee;
+            background: rgba(255, 126, 238, 0.1);
+        }
+
+        .profile-upload-area.dragover {
+            border-color: #ffcc70;
+            background: rgba(255, 204, 112, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: #d8bfd8;
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            color: #e0b3ff;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #d8bfd8;
+            font-size: 0.9rem;
+        }
+
+        .current-profile {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .current-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff7eee;
+            margin-bottom: 10px;
+        }
+
+        .current-profile p {
+            color: #d8bfd8;
+            font-size: 0.9rem;
+        }
+
+        .video-upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .video-upload-area:hover {
+            border-color: #ff7eee;
+            background: rgba(255, 126, 238, 0.1);
+        }
+
+        .video-upload-area.dragover {
+            border-color: #ffcc70;
+            background: rgba(255, 204, 112, 0.1);
+        }
+
+        .current-video {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .current-video video {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: 2px solid #ff7eee;
+        }
+
+        .current-video p {
+            color: #d8bfd8;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .admin-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Website Statistics Section */
+        .stats-section {
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #d8bfd8;
+        }
+
+        .accuracy-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .accuracy-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            border-radius: 4px;
+            transition: width 1s ease;
+            animation: accuracyPulse 2s infinite;
+        }
+
+        @keyframes accuracyPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .admin-action-btn {
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .admin-action-btn:hover {
+            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .admin-action-btn.secondary {
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+        }
+
+        .admin-action-btn.secondary:hover {
+            background: linear-gradient(45deg, #6a5acd, #8a2be2);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        /* Hidden file inputs */
+        .hidden-input {
+            display: none;
+        }
+
+        /* Admin Panel Overlay */
+        .admin-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .admin-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Prayer Notification */
+        .prayer-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            z-index: 10001;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: none;
+            animation: prayerAlert 0.8s ease;
+        }
+        
+        .prayer-notification h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .prayer-notification p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #e0b3ff;
+        }
+        
+        .prayer-notification button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .prayer-notification button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        
+        @keyframes prayerAlert {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Music Control Overlay */
+        .music-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            backdrop-filter: blur(15px);
+            transition: all 0.5s ease;
+        }
+        
+        .music-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .music-control {
+            text-align: center;
+            color: white;
+            padding: 50px;
+            border-radius: 25px;
+            background: rgba(138, 43, 226, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(25px);
+            animation: fadeInUp 1s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .music-control h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70, #ff7eee);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        
+        .music-control p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: #e0b3ff;
+            line-height: 1.6;
+        }
+        
+        .music-btn {
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.4);
+            margin: 0 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .music-btn:hover::before {
+            left: 100%;
+        }
+        
+        .music-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.6);
+        }
+        
+        .music-btn.secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .music-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+        
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            filter: blur(0.5px);
+        }
+        
+        body {
+            background: transparent;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 8s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: rgba(44, 16, 81, 0.75);
+            border-radius: 30px;
+            padding: 45px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+            margin-top: 120px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: slideInUp 1.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+            animation: shimmer 4s infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+            position: relative;
+        }
+        
+        .logo {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #8a2be2 0%, #9370db 50%, #6a5acd 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            animation: pulse 3s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: logoShimmer 3s infinite;
+        }
+        
+        @keyframes logoShimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        
+        header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 18px;
+            background: linear-gradient(45deg, #ff7eee, #ffcc70, #ff7eee, #8a2be2);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+            animation: gradientShift 4s ease-in-out infinite;
+            font-weight: 700;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            color: #e0b3ff;
+            animation: fadeIn 1.5s ease 0.5s both;
+            font-weight: 300;
+        }
+        
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+        
+        .payment-option {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 25px;
+            padding: 30px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease;
+            min-height: 180px;
+        }
+        
+        .payment-option:nth-child(1) { animation-delay: 0.2s; }
+        .payment-option:nth-child(2) { animation-delay: 0.3s; }
+        .payment-option:nth-child(3) { animation-delay: 0.4s; }
+        .payment-option:nth-child(4) { animation-delay: 0.5s; }
+        
+        .payment-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: left 0.6s;
+        }
+        
+        .payment-option:hover::before {
+            left: 100%;
+        }
+        
+        .payment-option:hover {
+            transform: translateY(-12px) scale(1.03);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .payment-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+            border-radius: 50%;
+            color: #e0b3ff;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .payment-option:hover .payment-icon {
+            transform: rotate(360deg) scale(1.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.25));
+            color: #fff;
+        }
+        
+        .payment-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #ffccff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .payment-option:hover .payment-details h3 {
+            color: #fff;
+            transform: scale(1.05);
+        }
+        
+        .payment-details p {
+            color: #d8bfd8;
+            font-size: 1.1rem;
+            word-break: break-all;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .payment-option:hover .payment-details p {
+            color: #e0b3ff;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.4s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+        }
+        
+        .copy-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.4s;
+        }
+        
+        .copy-btn:hover::before {
+            left: 100%;
+        }
+        
+        .copy-btn:hover {
+            background: linear-gradient(45deg, #6a5acd, #8a2be2);
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(138, 43, 226, 0.5);
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            color: white;
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        .action-btn:nth-of-type(1) { animation-delay: 0.7s; }
+        .action-btn:nth-of-type(2) { animation-delay: 0.8s; }
+        
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: left 0.6s;
+        }
+        
+        .action-btn:hover::before {
+            left: 100%;
+        }
+        
+        .action-btn:hover {
+            background: linear-gradient(45deg, #6a5acd, #8a2be2);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .action-btn i {
+            margin-right: 18px;
+            font-size: 1.4rem;
+            transition: transform 0.4s ease;
+        }
+        
+        .action-btn:hover i {
+            transform: scale(1.3) rotate(5deg);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 45px;
+            color: #d8bfd8;
+            font-size: 1.1rem;
+            animation: fadeIn 1.5s ease 1.2s both;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 35px;
+            right: 35px;
+            padding: 25px 30px;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            transform: translateX(120%);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.1rem;
+        }
+        
+        .notification i {
+            margin-right: 18px;
+            font-size: 28px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        /* Music Controls */
+        .music-controls {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .music-control-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-control-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.4s;
+        }
+        
+        .music-control-btn:hover::before {
+            left: 100%;
+        }
+        
+        .music-control-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 35px rgba(138, 43, 226, 0.5);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 30px;
+                margin: 15px;
+                margin-top: 140px;
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .music-control h2 {
+                font-size: 2.2rem;
+            }
+            
+            .music-control p {
+                font-size: 1.1rem;
+            }
+            
+            .music-btn {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+            
+            .payment-option {
+                min-height: 160px;
+                padding: 25px;
+            }
+            
+            .combined-widget {
+                top: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                min-width: 200px;
+            }
+            
+            .clock-time {
+                font-size: 1.4rem;
+            }
+            
+            .prayer-title {
+                font-size: 0.9rem;
+            }
+            
+            .prayer-item {
+                font-size: 0.75rem;
+            }
+
+            .admin-button {
+                top: 280px;
+                right: 65px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .menu-dropdown-button {
+                top: 280px;
+                right: 10px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .dropdown-menu {
+                top: 335px;
+                right: 10px;
+                width: 180px;
+            }
+
+            .admin-panel {
+                width: 100%;
+                left: -100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+                padding: 25px;
+                margin-top: 160px;
+            }
+            
+            .payment-option {
+                padding: 20px;
+                min-height: 140px;
+            }
+            
+            .action-btn {
+                padding: 18px;
+                font-size: 1.1rem;
+            }
+            
+            .music-controls {
+                bottom: 25px;
+                right: 25px;
+            }
+            
+            .music-control-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+                font-size: 45px;
+            }
+            
+            .combined-widget {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 10px auto 20px;
+                display: block;
+                width: fit-content;
+                min-width: 200px;
+            }
+
+            .admin-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .menu-dropdown-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .dropdown-menu {
+                position: relative;
+                top: auto;
+                left: auto;
+                width: 100%;
+                margin: 10px auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Combined Clock and Prayer Times Widget -->
+    <div class="combined-widget">
+        <div class="clock-section">
+            <div class="clock-time" id="clockTime">00:00:00</div>
+            <div class="clock-date" id="clockDate">Loading...</div>
+            <div class="clock-location">📍 Sumedang, Jawa Barat</div>
+        </div>
+        <div class="prayer-section">
+            <div class="prayer-title">🕌 Waktu Sholat</div>
+            <div class="prayer-item" id="fajr">
+                <span class="prayer-name">Subuh</span>
+                <span class="prayer-time">--:--</span>
+            </div>
+            <div class="prayer-item" id="dhuhr">
+                <span class="prayer-name">Dzuhur</span>
+                <span class="prayer-time">--:--</span>
+            </div>
+            <div class="prayer-item" id="asr">
+                <span class="prayer-name">Ashar</span>
+                <span class="prayer-time">--:--</span>
+            </div>
+            <div class="prayer-item" id="maghrib">
+                <span class="prayer-name">Maghrib</span>
+                <span class="prayer-time">--:--</span>
+            </div>
+            <div class="prayer-item" id="isha">
+                <span class="prayer-name">Isya</span>
+                <span class="prayer-time">--:--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Button -->
+    <button class="admin-button" onclick="toggleAdminPanel()" title="Admin Panel">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Menu Dropdown Button -->
+    <button class="menu-dropdown-button" onclick="toggleDropdownMenu()" title="Menu Harga">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="harga-panel.html" class="dropdown-item">
+            <i class="fas fa-server"></i>
+            Harga Panel
+        </a>
+        <a href="harga-murid-band.html" class="dropdown-item">
+            <i class="fas fa-music"></i>
+            Harga Murid Band
+        </a>
+        <a href="harga-vps.html" class="dropdown-item">
+            <i class="fas fa-cloud"></i>
+            Harga VPS
+        </a>
+        <a href="album-foto.html" class="dropdown-item">
+            <i class="fas fa-camera"></i>
+            Album Foto
+        </a>
+        <a href="info-website.html" class="dropdown-item">
+            <i class="fas fa-info-circle"></i>
+            Info Website
+        </a>
+    </div>
+
+    <!-- Admin Panel Overlay -->
+    <div class="admin-overlay" id="adminOverlay" onclick="closeAdminPanel()"></div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-panel-header">
+            <button class="close-admin-btn" onclick="closeAdminPanel()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2><i class="fas fa-shield-alt"></i> Admin Panel</h2>
+            <p>Dashboard Administrasi</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="admin-login" id="adminLogin">
+            <form class="login-form" onsubmit="adminLogin(event)">
+                <div class="form-group">
+                    <label for="adminPassword">
+                        <i class="fas fa-lock"></i> Password Admin
+                    </label>
+                    <input 
+                        type="password" 
+                        id="adminPassword" 
+                        placeholder="Masukkan password admin..."
+                        required
+                    >
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Masuk
+                </button>
+                <div class="login-error" id="loginError">
+                    Password salah! Silakan coba lagi.
+                </div>
+            </form>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="admin-dashboard" id="adminDashboard">
+            <!-- Website Statistics Section -->
+            <div class="admin-section stats-section">
+                <h3>
+                    <i class="fas fa-chart-line"></i>
+                    Statistik Website
+                </h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="stat-number" id="accuracyNumber">98.7%</div>
+                        <div class="stat-label">Akurasi Website</div>
+                        <div class="accuracy-bar">
+                            <div class="accuracy-fill" style="width: 98.7%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" id="visitorNumber">1,247</div>
+                        <div class="stat-label">Total Pengunjung</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="admin-section">
+                <h3>
+                    <i class="fas fa-user-circle"></i>
+                    Ganti Foto Profil
+                </h3>
+                <div class="profile-upload-area" onclick="document.getElementById('profileInput').click()">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">Klik atau drag & drop foto profil</div>
+                    <div class="upload-subtext">Format: JPG, PNG, GIF (Max: 5MB)</div>
+                </div>
+                <input type="file" id="profileInput" class="hidden-input" accept="image/*" onchange="handleProfileUpload(event)">
+                <div class="current-profile" id="currentProfile" style="display: none;">
+                    <img id="profilePreview" src="" alt="Profile Preview">
+                    <p>Foto profil saat ini</p>
+                </div>
+            </div>
+
+            <!-- Video Background Section -->
+            <div class="admin-section">
+                <h3>
+                    <i class="fas fa-video"></i>
+                    Ganti Video Latar Belakang
+                </h3>
+                <div class="video-upload-area" onclick="document.getElementById('videoInput').click()">
+                    <div class="upload-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="upload-text">Klik atau drag & drop video latar belakang</div>
+                    <div class="upload-subtext">Format: MP4, WebM, OGV (Max: 50MB)</div>
+                </div>
+                <input type="file" id="videoInput" class="hidden-input" accept="video/*" onchange="handleVideoUpload(event)">
+                <div class="current-video" id="currentVideo" style="display: none;">
+                    <video id="videoPreview" controls muted>
+                        <source src="" type="video/mp4">
+                    </video>
+                    <p>Video latar belakang saat ini</p>
+                </div>
+            </div>
+
+            <!-- Admin Actions -->
+            <div class="admin-actions">
+                <button class="admin-action-btn" onclick="applyChanges()">
+                    <i class="fas fa-save"></i>
+                    Terapkan Perubahan
+                </button>
+                <button class="admin-action-btn secondary" onclick="resetToDefault()">
+                    <i class="fas fa-undo"></i>
+                    Reset ke Default
+                </button>
+                <button class="admin-action-btn" onclick="logoutAdmin()" style="background: linear-gradient(45deg, #e74c3c, #c0392b);">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Keluar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prayer Notification -->
+    <div class="prayer-notification" id="prayerNotification">
+        <h3 id="prayerNotificationTitle">🕌 Waktu Sholat</h3>
+        <p id="prayerNotificationText">Saatnya untuk melaksanakan sholat</p>
+        <button onclick="closePrayerNotification()">Tutup</button>
+    </div>
+
+    <!-- Music Control Overlay -->
+    <script>
+    const text = "WELCOME TO WEBSITE IZALMODZ";
+    const typingElement = document.getElementById("typing");
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>
+            <p>Aktifkan musik untuk pengalaman yang lebih menarik<br>dan nikmati suasana yang lebih hidup</p>
+            <button class="music-btn" onclick="enableMusic()">
+                <i class="fas fa-volume-up"></i> Aktifkan Musik
+            </button>
+            <button class="music-btn secondary" onclick="skipMusic()">
+                <i class="fas fa-volume-mute"></i> Lewati
+            </button>
+        </div>
+    </div>
+    
+     <!-- Teks sambutan -->
+  <h1 id="typing"></h1>
+  
+  
+  <script>
+    const text = "WELCOME TO WEBSITE IZALMODZ";
+    const typingElement = document.getElementById("typing");
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video id="backgroundVideo" muted loop preload="auto">
+            <source src="1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Animated Particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <h1>PAYMENT IZALMODZ</h1>
+            <p>Pilih metode pembayaran yang Anda inginkan</p>
+        </header>
+        
+        <div class="payment-grid">
+            <div class="payment-option" onclick="copyToClipboard('087840418101', 'DANA')">
+                <div class="payment-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="payment-details">
+                    <h3>DANA</h3>
+                    <p>087840418101</p>
+                    <button class="copy-btn">Salin Nomor</button>
+                </div>
+            </div>
+            
+            <div class="payment-option" onclick="copyToClipboard('087817757895', 'GOPAY')">
+                <div class="payment-icon">
+                    <i class="fab fa-google-wallet"></i>
+                </div>
+                <div class="payment-details">
+                    <h3>GOPAY</h3>
+                    <p>087817757895</p>
+                    <button class="copy-btn">Salin Nomor</button>
+                </div>
+            </div>
+            
+            <div class="payment-option" onclick="copyToClipboard('087817757895', 'OVO')">
+                <div class="payment-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="payment-details">
+                    <h3>OVO</h3>
+                    <p>087817757895</p>
+                    <button class="copy-btn">Salin Nomor</button>
+                </div>
+            </div>
+            
+            <div class="payment-option" onclick="showQRISNotification()">
+                <div class="payment-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="payment-details">
+                    <h3>QRIS</h3>
+                    <p>Hubungi kami di Telegram untuk QRIS</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="https://t.me/Izalmodz" class="action-btn" target="_blank">
+                <i class="fab fa-telegram"></i> Jasa Order Murband via Telegram
+            </a>
+            
+            <a href="https://wa.me/6287840418101" class="action-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Payment Izalmodz. Semua hak cipta dilindungi.</p>
+    </footer>
+    
+    <!-- Music Controls -->
+    <div class="music-controls" id="musicControls">
+        <button class="music-control-btn" onclick="toggleMusic()" id="musicToggle" title="Play/Pause Music">
+            <i class="fas fa-pause"></i>
+        </button>
+        <button class="music-control-btn" onclick="toggleMute()" id="muteToggle" title="Mute/Unmute">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text">Nomor berhasil disalin ke clipboard!</span>
+    </div>
+
+    <script>
+        let backgroundMusic;
+        let musicEnabled = false;
+        let isVideoLoaded = false;
+        let prayerTimes = {};
+        let currentPrayer = '';
+        let prayerCheckInterval;
+        let isAdminLoggedIn = false;
+        let currentProfileFile = null;
+        let currentVideoFile = null;
+        
+        // Website Statistics
+        let websiteAccuracy = 98.7;
+        let visitorCount = parseInt(localStorage.getItem('visitorCount')) || 1247;
+        let accuracyUpdateInterval;
+        
+        // Admin password
+        const ADMIN_PASSWORD = 'Izalmodz';
+        
+        // Sumedang coordinates
+        const SUMEDANG_LAT = -6.8595;
+        const SUMEDANG_LNG = 107.9239;
+        const SUMEDANG_TIMEZONE = 'Asia/Jakarta'; // UTC+7
+        
+        // Admin Panel Functions
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            const overlay = document.getElementById('adminOverlay');
+            
+            if (panel.classList.contains('open')) {
+                closeAdminPanel();
+            } else {
+                panel.classList.add('open');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            const overlay = document.getElementById('adminOverlay');
+            
+            panel.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function adminLogin(event) {
+            event.preventDefault();
+            const password = document.getElementById('adminPassword').value;
+            const errorDiv = document.getElementById('loginError');
+            
+            if (password === ADMIN_PASSWORD) {
+                isAdminLoggedIn = true;
+                document.getElementById('adminLogin').classList.add('hidden');
+                document.getElementById('adminDashboard').classList.add('active');
+                showNotification('✅ Login admin berhasil!');
+                errorDiv.style.display = 'none';
+                
+                // Start stats updater and update display
+                updateWebsiteStats();
+                startStatsUpdater();
+            } else {
+                errorDiv.style.display = 'block';
+                document.getElementById('adminPassword').value = '';
+                showNotification('❌ Password admin salah!');
+            }
+        }
+        
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            document.getElementById('adminLogin').classList.remove('hidden');
+            document.getElementById('adminDashboard').classList.remove('active');
+            document.getElementById('adminPassword').value = '';
+            closeAdminPanel();
+            
+            // Stop stats updater
+            stopStatsUpdater();
+            
+            showNotification('👋 Logout admin berhasil!');
+        }
+        
+        // File Upload Handlers
+        function handleProfileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // Validate file type
+            if (!file.type.startsWith('image/')) {
+                showNotification('❌ File harus berupa gambar!');
+                return;
+            }
+            
+            // Validate file size (5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                showNotification('❌ Ukuran file maksimal 5MB!');
+                return;
+            }
+            
+            currentProfileFile = file;
+            
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('profilePreview');
+                const container = document.getElementById('currentProfile');
+                
+                preview.src = e.target.result;
+                container.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+            
+            showNotification('📷 Foto profil berhasil dipilih!');
+        }
+        
+        function handleVideoUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            // Validate file type
+            if (!file.type.startsWith('video/')) {
+                showNotification('❌ File harus berupa video!');
+                return;
+            }
+            
+            // Validate file size (50MB)
+            if (file.size > 50 * 1024 * 1024) {
+                showNotification('❌ Ukuran file maksimal 50MB!');
+                return;
+            }
+            
+            currentVideoFile = file;
+            
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('videoPreview');
+                const container = document.getElementById('currentVideo');
+                
+                preview.src = e.target.result;
+                container.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+            
+            showNotification('🎥 Video latar belakang berhasil dipilih!');
+        }
+        
+        // Drag and Drop functionality
+        function setupDragAndDrop() {
+            const profileArea = document.querySelector('.profile-upload-area');
+            const videoArea = document.querySelector('.video-upload-area');
+            
+            // Profile upload area
+            profileArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.classList.add('dragover');
+            });
+            
+            profileArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+            });
+            
+            profileArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    const event = { target: { files: [files[0]] } };
+                    handleProfileUpload(event);
+                }
+            });
+            
+            // Video upload area
+            videoArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.classList.add('dragover');
+            });
+            
+            videoArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+            });
+            
+            videoArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    const event = { target: { files: [files[0]] } };
+                    handleVideoUpload(event);
+                }
+            });
+        }
+        
+        function applyChanges() {
+            let changesApplied = false;
+            
+            // Apply profile picture changes
+            if (currentProfileFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Here you would typically upload to server
+                    // For demo, we'll just show notification
+                    showNotification('✅ Foto profil berhasil diperbarui!');
+                };
+                reader.readAsDataURL(currentProfileFile);
+                changesApplied = true;
+            }
+            
+            // Apply video background changes
+            if (currentVideoFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Update background video
+                    const backgroundVideo = document.getElementById('backgroundVideo');
+                    backgroundVideo.src = e.target.result;
+                    backgroundVideo.load();
+                    
+                    showNotification('✅ Video latar belakang berhasil diperbarui!');
+                };
+                reader.readAsDataURL(currentVideoFile);
+                changesApplied = true;
+            }
+            
+            if (!changesApplied) {
+                showNotification('ℹ️ Tidak ada perubahan untuk diterapkan.');
+            } else {
+                setTimeout(() => {
+                    showNotification('🎉 Semua perubahan berhasil diterapkan!');
+                }, 1000);
+            }
+        }
+        
+        function resetToDefault() {
+            // Reset to default video
+            const backgroundVideo = document.getElementById('backgroundVideo');
+            backgroundVideo.src = '1.mp4';
+            backgroundVideo.load();
+            
+            // Clear current files
+            currentProfileFile = null;
+            currentVideoFile = null;
+            
+            // Hide previews
+            document.getElementById('currentProfile').style.display = 'none';
+            document.getElementById('currentVideo').style.display = 'none';
+            
+            // Clear file inputs
+            document.getElementById('profileInput').value = '';
+            document.getElementById('videoInput').value = '';
+            
+            showNotification('🔄 Berhasil reset ke pengaturan default!');
+        }
+        
+        // Website Statistics Functions
+        function updateWebsiteStats() {
+            // Update visitor count
+            visitorCount++;
+            localStorage.setItem('visitorCount', visitorCount.toString());
+            
+            // Update accuracy with slight random variation (realistic simulation)
+            const variation = (Math.random() - 0.5) * 0.2; // ±0.1%
+            websiteAccuracy = Math.max(95.0, Math.min(99.9, websiteAccuracy + variation));
+            
+            // Update display
+            document.getElementById('visitorNumber').textContent = visitorCount.toLocaleString();
+            document.getElementById('accuracyNumber').textContent = websiteAccuracy.toFixed(1) + '%';
+            
+            // Update accuracy bar
+            const accuracyFill = document.querySelector('.accuracy-fill');
+            if (accuracyFill) {
+                accuracyFill.style.width = websiteAccuracy.toFixed(1) + '%';
+            }
+        }
+        
+        function startStatsUpdater() {
+            // Update stats every 30 seconds
+            accuracyUpdateInterval = setInterval(() => {
+                if (isAdminLoggedIn) {
+                    updateWebsiteStats();
+                }
+            }, 30000);
+        }
+        
+        function stopStatsUpdater() {
+            if (accuracyUpdateInterval) {
+                clearInterval(accuracyUpdateInterval);
+            }
+        }
+        
+        function initializeStats() {
+            // Increment visitor count on page load
+            visitorCount++;
+            localStorage.setItem('visitorCount', visitorCount.toString());
+            
+            // Update display if admin panel is open
+            if (isAdminLoggedIn) {
+                updateWebsiteStats();
+            }
+        }
+        
+        // Anti-zoom functionality
+        function preventZoom() {
+            // Prevent pinch zoom
+            document.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 1) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
+            // Prevent double tap zoom
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(e) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    e.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+            
+            // Prevent keyboard zoom
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Prevent mouse wheel zoom
+            document.addEventListener('wheel', function(e) {
+                if (e.ctrlKey || e.metaKey) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        }
+        
+        // Initialize digital clock
+        function updateClock() {
+            const now = new Date();
+            const sumedangTime = new Date(now.toLocaleString("en-US", {timeZone: SUMEDANG_TIMEZONE}));
+            
+            const timeString = sumedangTime.toLocaleTimeString('id-ID', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            const dateString = sumedangTime.toLocaleDateString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            document.getElementById('clockTime').textContent = timeString;
+            document.getElementById('clockDate').textContent = dateString;
+        }
+        
+        // Fetch prayer times from API
+        async function fetchPrayerTimes() {
+            try {
+                const today = new Date();
+                const dateString = today.toISOString().split('T')[0];
+                
+                // Using AlAdhan API
+                const response = await fetch(`https://api.aladhan.com/v1/timings/${dateString}?latitude=${SUMEDANG_LAT}&longitude=${SUMEDANG_LNG}&method=2`);
+                const data = await response.json();
+                
+                if (data.code === 200) {
+                    const timings = data.data.timings;
+                    prayerTimes = {
+                        fajr: timings.Fajr,
+                        dhuhr: timings.Dhuhr,
+                        asr: timings.Asr,
+                        maghrib: timings.Maghrib,
+                        isha: timings.Isha
+                    };
+                    
+                    updatePrayerTimesDisplay();
+                    startPrayerTimeChecker();
+                } else {
+                    throw new Error('API response error');
+                }
+            } catch (error) {
+                console.log('Error fetching prayer times:', error);
+                // Fallback to approximate times for Sumedang
+                prayerTimes = {
+                    fajr: '04:45',
+                    dhuhr: '11:50',
+                    asr: '15:10',
+                    maghrib: '17:50',
+                    isha: '19:05'
+                };
+                updatePrayerTimesDisplay();
+                startPrayerTimeChecker();
+            }
+        }
+        
+        // Update prayer times display
+        function updatePrayerTimesDisplay() {
+            document.querySelector('#fajr .prayer-time').textContent = prayerTimes.fajr;
+            document.querySelector('#dhuhr .prayer-time').textContent = prayerTimes.dhuhr;
+            document.querySelector('#asr .prayer-time').textContent = prayerTimes.asr;
+            document.querySelector('#maghrib .prayer-time').textContent = prayerTimes.maghrib;
+            document.querySelector('#isha .prayer-time').textContent = prayerTimes.isha;
+            
+            updateCurrentPrayer();
+        }
+        
+        // Update current prayer highlight
+        function updateCurrentPrayer() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString('en-US', {
+                timeZone: SUMEDANG_TIMEZONE,
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Remove current class from all items
+            document.querySelectorAll('.prayer-item').forEach(item => {
+                item.classList.remove('current');
+            });
+            
+            // Find current prayer time
+            const prayers = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+            let nextPrayer = '';
+            
+            for (let i = 0; i < prayers.length; i++) {
+                const prayerTime = prayerTimes[prayers[i]];
+                if (currentTime < prayerTime) {
+                    nextPrayer = prayers[i];
+                    break;
+                }
+            }
+            
+            if (nextPrayer) {
+                document.getElementById(nextPrayer).classList.add('current');
+                currentPrayer = nextPrayer;
+            } else {
+                // After Isha, next is Fajr tomorrow
+                document.getElementById('fajr').classList.add('current');
+                currentPrayer = 'fajr';
+            }
+        }
+        
+        // Check for prayer time notifications
+        function checkPrayerTime() {
+            const now = new Date();
+            const currentTime = now.toLocaleTimeString('en-US', {
+                timeZone: SUMEDANG_TIMEZONE,
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Check if current time matches any prayer time
+            Object.keys(prayerTimes).forEach(prayer => {
+                if (currentTime === prayerTimes[prayer]) {
+                    showPrayerNotification(prayer);
+                }
+            });
+            
+            updateCurrentPrayer();
+        }
+        
+        // Show prayer notification
+        function showPrayerNotification(prayer) {
+            const prayerNames = {
+                fajr: 'Subuh',
+                dhuhr: 'Dzuhur',
+                asr: 'Ashar',
+                maghrib: 'Maghrib',
+                isha: 'Isya'
+            };
+            
+            const notification = document.getElementById('prayerNotification');
+            const title = document.getElementById('prayerNotificationTitle');
+            const text = document.getElementById('prayerNotificationText');
+            
+            title.textContent = `🕌 Waktu Sholat ${prayerNames[prayer]}`;
+            text.textContent = `Saatnya untuk melaksanakan sholat ${prayerNames[prayer]}. Semoga Allah menerima ibadah Anda.`;
+            
+            notification.style.display = 'block';
+            
+            // Auto close after 10 seconds
+            setTimeout(() => {
+                closePrayerNotification();
+            }, 10000);
+        }
+        
+        // Close prayer notification
+        function closePrayerNotification() {
+            document.getElementById('prayerNotification').style.display = 'none';
+        }
+        
+        // Start prayer time checker
+        function startPrayerTimeChecker() {
+            if (prayerCheckInterval) {
+                clearInterval(prayerCheckInterval);
+            }
+            
+            prayerCheckInterval = setInterval(checkPrayerTime, 60000); // Check every minute
+            checkPrayerTime(); // Initial check
+        }
+        
+        // Initialize particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 60; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Enable music function
+        function enableMusic() {
+            musicEnabled = true;
+            
+            // Create audio element for background music
+            backgroundMusic = new Audio('background.mp4');
+            backgroundMusic.loop = true;
+            backgroundMusic.volume = 0.25;
+            
+            // Start video background
+            const video = document.getElementById('backgroundVideo');
+            video.muted = false;
+            video.volume = 0.3;
+            
+            if (!isVideoLoaded) {
+                video.addEventListener('loadeddata', () => {
+                    video.play().catch(e => console.log('Video autoplay prevented:', e));
+                });
+                video.load();
+                isVideoLoaded = true;
+            } else {
+                video.play().catch(e => console.log('Video autoplay prevented:', e));
+            }
+            
+            // Play background music
+            backgroundMusic.play().catch(e => {
+                console.log('Audio autoplay prevented:', e);
+                // Fallback: use video audio
+                video.muted = false;
+            });
+            
+            // Hide overlay with smooth transition
+            const overlay = document.getElementById('musicOverlay');
+            overlay.classList.add('hidden');
+            
+            showNotification('🎵 Musik telah diaktifkan! Nikmati pengalaman yang lebih menarik');
+        }
+        
+        // Skip music function
+        function skipMusic() {
+            // Start video background without audio
+            const video = document.getElementById('backgroundVideo');
+            video.muted = true;
+            
+            if (!isVideoLoaded) {
+                video.addEventListener('loadeddata', () => {
+                    video.play().catch(e => console.log('Video autoplay prevented:', e));
+                });
+                video.load();
+                isVideoLoaded = true;
+            } else {
+                video.play().catch(e => console.log('Video autoplay prevented:', e));
+            }
+            
+            // Hide overlay
+            const overlay = document.getElementById('musicOverlay');
+            overlay.classList.add('hidden');
+            
+            // Hide music controls
+            document.getElementById('musicControls').style.display = 'none';
+            
+            showNotification('Video background diaktifkan tanpa musik');
+        }
+        
+        // Toggle music
+        function toggleMusic() {
+            if (!musicEnabled) return;
+            
+            const toggleBtn = document.getElementById('musicToggle');
+            const video = document.getElementById('backgroundVideo');
+            
+            if (backgroundMusic) {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    video.play();
+                    toggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    showNotification('🎵 Musik dilanjutkan');
+                } else {
+                    backgroundMusic.pause();
+                    video.pause();
+                    toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    showNotification('⏸️ Musik dijeda');
+                }
+            } else {
+                // Fallback to video audio
+                if (video.paused) {
+                    video.play();
+                    toggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    video.pause();
+                    toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            }
+        }
+        
+        // Toggle mute
+        function toggleMute() {
+            if (!musicEnabled) return;
+            
+            const muteBtn = document.getElementById('muteToggle');
+            const video = document.getElementById('backgroundVideo');
+            
+            if (backgroundMusic) {
+                if (backgroundMusic.muted) {
+                    backgroundMusic.muted = false;
+                    video.muted = false;
+                    muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    showNotification('🔊 Suara diaktifkan');
+                } else {
+                    backgroundMusic.muted = true;
+                    video.muted = true;
+                    muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    showNotification('🔇 Suara dimatikan');
+                }
+            } else {
+                // Fallback to video audio
+                if (video.muted) {
+                    video.muted = false;
+                    muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                } else {
+                    video.muted = true;
+                    muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                }
+            }
+        }
+        
+        // Copy to clipboard function
+        function copyToClipboard(text, method) {
+            // Modern clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showNotification(`✅ Nomor ${method} berhasil disalin!`);
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(text, method);
+                });
+            } else {
+                fallbackCopyTextToClipboard(text, method);
+            }
+        }
+        
+        // Fallback copy function
+        function fallbackCopyTextToClipboard(text, method) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showNotification(`✅ Nomor ${method} berhasil disalin!`);
+            } catch (err) {
+                showNotification(`❌ Gagal menyalin nomor ${method}`);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+        
+        // Show QRIS notification
+        function showQRISNotification() {
+            showNotification('📱 Silakan hubungi kami di Telegram untuk mendapatkan QRIS');
+        }
+        
+        // Show notification function
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notification-text');
+            
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 4000);
+        }
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prevent zoom
+            preventZoom();
+            
+            // Initialize website statistics
+            initializeStats();
+            
+            // Start clock
+            updateClock();
+            setInterval(updateClock, 1000);
+            
+            // Fetch prayer times
+            fetchPrayerTimes();
+            
+            // Create particles
+            createParticles();
+            
+            // Setup drag and drop
+            setupDragAndDrop();
+            
+            // Add scroll effects for parallax
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.video-background');
+                const speed = scrolled * 0.3;
+                parallax.style.transform = `translateY(${speed}px)`;
+                
+                // Parallax effect for particles
+                const particles = document.querySelector('.particles');
+                particles.style.transform = `translateY(${scrolled * 0.1}px)`;
+            });
+            
+            // Add keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.code === 'Space' && musicEnabled) {
+                    e.preventDefault();
+                    toggleMusic();
+                } else if (e.code === 'KeyM' && musicEnabled) {
+                    e.preventDefault();
+                    toggleMute();
+                }
+            });
+            
+            // Add visibility change handler
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && backgroundMusic && !backgroundMusic.paused) {
+                    backgroundMusic.pause();
+                    document.getElementById('backgroundVideo').pause();
+                } else if (!document.hidden && backgroundMusic && backgroundMusic.paused && musicEnabled) {
+                    backgroundMusic.play();
+                    document.getElementById('backgroundVideo').play();
+                }
+            });
+        });
+
+        // Dropdown Menu Functions
+        function toggleDropdownMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.menu-dropdown-button');
+            
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Close dropdown when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const dropdown = document.getElementById('dropdownMenu');
+                dropdown.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+    <meta property="og:title" content="Payment Izalmodz - Modern Interactive">
+    <meta property="og:description" content="Sistem pembayaran modern dan interaktif.">
+    <meta property="og:image" content="2.jpg">
+    <meta property="og:url" content="https://izalxys.github.io/Izalmodz/payment">
+    <meta property="og:type" content="website">
+
+
+
+<script>
+    // Set zoom default to 50% for Chrome Android
+    if (navigator.userAgent.includes("Android") && navigator.userAgent.includes("Chrome")) {
+        document.body.style.zoom = "50%";
+    }
+</script>
+
